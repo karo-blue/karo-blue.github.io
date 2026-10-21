@@ -6,12 +6,16 @@
   <title>步步有为 · 正在跳转</title>
   <link rel="canonical" href="https://karo-blue.github.io/buyunlu/">
   <script>
-    window.location.replace('https://karo-blue.github.io/buyunlu/' + window.location.search + window.location.hash);
+    const destination = new URL('https://karo-blue.github.io/buyunlu/');
+    destination.search = window.location.search;
+    destination.searchParams.set('v', '1.0.22');
+    destination.hash = window.location.hash;
+    window.location.replace(destination.href);
   </script>
-  <noscript><meta http-equiv="refresh" content="0;url=https://karo-blue.github.io/buyunlu/"></noscript>
+  <noscript><meta http-equiv="refresh" content="0;url=https://karo-blue.github.io/buyunlu/?v=1.0.22"></noscript>
 </head>
 <body>
   <p>正在进入步步有为…</p>
-  <p>如果没有自动跳转，请<a href="https://karo-blue.github.io/buyunlu/">点击进入游戏</a>。</p>
+  <p>如果没有自动跳转，请<a href="https://karo-blue.github.io/buyunlu/?v=1.0.22">点击进入游戏</a>。</p>
 </body>
 </html>
