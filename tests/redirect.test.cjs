@@ -11,9 +11,9 @@ test('root entry replaces history with the fixed game URL and preserves query an
     let destination;
     vm.runInNewContext(script, { URL, window: { location: { search, hash, replace(value) { destination = value; } } } });
     const expected = new URL('https://karo-blue.github.io/buyunlu/' + search + hash);
-    expected.searchParams.set('v', '1.0.22');
+    expected.searchParams.set('v', '1.0.23');
     assert.equal(destination, expected.href);
   }
-  assert.match(html, /<noscript>\s*<meta http-equiv="refresh" content="0;url=https:\/\/karo-blue\.github\.io\/buyunlu\/\?v=1\.0\.22">\s*<\/noscript>/);
-  assert.match(html, /<a href="https:\/\/karo-blue\.github\.io\/buyunlu\/\?v=1\.0\.22">/);
+  assert.match(html, /<noscript>\s*<meta http-equiv="refresh" content="0;url=https:\/\/karo-blue\.github\.io\/buyunlu\/\?v=1\.0\.23">\s*<\/noscript>/);
+  assert.match(html, /<a href="https:\/\/karo-blue\.github\.io\/buyunlu\/\?v=1\.0\.23">/);
 });
